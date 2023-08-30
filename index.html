@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Yourself</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oxygen&display=swap" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="./assets/reset.css"> -->
+    <link rel="stylesheet" href="./assets/style.css">
+    <script defer src="./script.js"></script>
+</head>
+<body>
+<!-- Quiz Title and High Score Link -->
+    <header>
+        <h1>Do you know me?</h1>
+        <nav>
+            <p id="timer">Timer</p>
+            <a href="">High Scores</a>
+        </nav>
+    </header>
+    <main>
+<!-- Start screen -->
+        <section id="startScreen" class="show">
+            <p>You will have 60 seconds to finish this quiz.</p>
+            <button id="startBtn">Start</button>
+        </section>
+<!-- Question -->
+        <section id="quizScreen" class="hide">
+            <h2 id="quizQuestion"></h2>
+            <div id="quizChoices"></div>
+        </section>
+<!-- High Score -->
+        <section id="highScores">
+
+        </section>
+    </main>
+    <footer>
+
+    </footer>
+</body>
+</html>

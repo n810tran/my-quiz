@@ -1,0 +1,26 @@
+*{
+    font-family: 'Oxygen', sans-serif;
+    margin: 10px;
+    padding: 10px;
+}
+
+h1 {
+    display: flex;
+    align-items:end;
+    justify-content: center;
+}
+
+nav {
+    display: flex;
+    justify-content:space-between;
+    align-items: end;
+}
+
+#startPage {
+    display: flex;
+    justify-content: center;
+}
+
+.hide {
+    display: none;
+}
