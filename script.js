@@ -4,13 +4,14 @@ const quizScreen = document.querySelector('#quizScreen');
 const time = document.querySelector('#time')
 const quizQuestion = document.querySelector('#quizQuestion');
 const quizChoices = document.querySelector('#quizChoices');
-const scoreScreen = document.querySelector('#scoreScreen')
-const = document.querySelector('#')
-const = document.querySelector('#') 
+const scoreScreen = document.querySelector('#scoreScreen');
+const score = document.querySelector('#score');
+const submit = document.querySelector('#submit');
+const highScores = document.querySelector('#highScores'); 
 
 var count = 60;
 var currentIndex = 0;
-var timer
+var timer;
 
 // Questions as an array or an object
 let questions = [
@@ -50,7 +51,6 @@ let questions = [
 startBtn.addEventListener("click", startGame)
 
 function startGame() {
-    time.textContent = --count + " seconds left" // Displays timer instantly
     startScreen.setAttribute('class', 'hide');
     quizScreen.setAttribute('class','show');
     let timer = setInterval(function(){
@@ -95,8 +95,8 @@ function checkAnswer(event) {
 // When all questions are answered or when timer reaches 0, end game
 function endGame(){
     clearInterval(timer);
-    var ;
-
+    scoreScreen.setAttribute('class','show');
+    score.textContent = count
     quizScreen.setAttribute('class','hide');
 
     
