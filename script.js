@@ -2,16 +2,21 @@ const startBtn = document.querySelector('#startBtn');
 const startScreen = document.querySelector('#startScreen');
 const quizScreen = document.querySelector('#quizScreen');
 const time = document.querySelector('#time')
-const quizQuestion = document.querySelector('#quizQuestion')
-const quizChoices = document.querySelector('#quizChoices')
-var count = 60
-var currentIndex = 0
+const quizQuestion = document.querySelector('#quizQuestion');
+const quizChoices = document.querySelector('#quizChoices');
+const scoreScreen = document.querySelector('#scoreScreen')
+const = document.querySelector('#')
+const = document.querySelector('#') 
+
+var count = 60;
+var currentIndex = 0;
+var timer
 
 // Questions as an array or an object
 let questions = [
     {
         question: 'What is my middle name?' ,
-        choices: ['choice1', 'Khoa', 'choice3', 'choice4'],
+        choices: ['Kevin', 'Khoa', 'Khanh', 'Kyle'],
         correct: 'Khoa'
     },
     {
@@ -20,24 +25,24 @@ let questions = [
         correct: 'Two'
     },
     {
-        question: 'Placeholder?',
-        choices: ['choice1', 'choice2', 'choice3', 'choice4'],
-        correct: 'choice1'
+        question: 'What is my birthday month?',
+        choices: ['April', 'May', 'June', 'July'],
+        correct: 'April'
     },
     {
-        question: 'Placeholder?',
-        choices: ['choice1', 'choice2', 'choice3', 'choice4'],
-        correct: 'choice4'
+        question: 'Where do I live?',
+        choices: ['Santa Ana', 'Costa Mesa', 'Irvine', 'Tustin'],
+        correct: 'Tustin'
     },
     {
-        question: 'Placeholder?',
-        choices: ['choice1', 'choice2', 'choice3', 'choice4'],
-        correct: 'choice1'
+        question: 'Where do I work?',
+        choices: ['Hospital', 'Fire Department', 'Lululemon', 'Sandwich Emporium'],
+        correct: 'Hospital'
     },
     {
-        question: 'Placeholder?',
-        choices: ['choice1', 'choice2', 'choice3', 'choice4'],
-        correct: 'choice2'
+        question: 'What is my favorite food?',
+        choices: ['Ramen', 'Pho', 'Sushi', 'Pizza'],
+        correct: 'Pho'
     },
 ]
 
@@ -78,8 +83,8 @@ function checkAnswer(event) {
     const correctAnswer = questions[currentIndex].correct;
     if(selectedAnswer !== correctAnswer) {
         count -= 10;
-    } else {
-        currentIndex++;
+    }
+    currentIndex++;
     if (currentIndex === questions.length) {
         endGame();
     } else {
@@ -87,12 +92,13 @@ function checkAnswer(event) {
     }
     }
 
-}
-
 // When all questions are answered or when timer reaches 0, end game
 function endGame(){
     clearInterval(timer);
-    
+    var ;
 
+    quizScreen.setAttribute('class','hide');
+
+    
 }
 // When game is over, save initials and score
